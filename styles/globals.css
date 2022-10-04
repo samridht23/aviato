@@ -1,26 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: NeueNormal;
+  src: url(../public/fonts/NeueHaasDisplayRoman.ttf) format("truetype");
+}
+@font-face {
+  font-family: NeueThin;
+  src: url(../public/fonts/NeueHaasDisplayThin.ttf) format("truetype");
+}
+@font-face {
+  font-family: NeueMedium;
+  src: url(../public/fonts/NeueHaasDisplayMediu.ttf) format("truetype");
+}
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+  font-family: "NeueNormal";
 }
