@@ -1,18 +1,17 @@
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
 import Image from "next/image";
 import AvatarImage from "../../public/eric.svg";
+import cx from "classnames";
+import { ReactNode } from "react";
 import {
   FileIcon,
   MixerHorizontalIcon,
   ExitIcon,
   ArchiveIcon,
 } from "@radix-ui/react-icons";
-import cx from "classnames";
-import { ReactNode } from "react";
 
 interface RadixMenuItem {
   label: string;
-  shortcut?: string;
   icon?: ReactNode;
 }
 
@@ -55,7 +54,7 @@ const DropdownMenu = () => {
             className={cx(
               " radix-side-top:animate-slide-up radix-side-bottom:animate-slide-down",
               "w-48 rounded-lg px-1.5 py-1 shadow-md",
-              "bg-white dark:bg-gray-800"
+              "bg-white "
             )}
           >
             {generalMenuItems.map(({ label, icon }, i) => (
@@ -71,7 +70,7 @@ const DropdownMenu = () => {
               </DropdownMenuPrimitive.Item>
             ))}
 
-            <DropdownMenuPrimitive.Separator className="my-1 h-px bg-gray-200 dark:bg-gray-700" />
+            <DropdownMenuPrimitive.Separator className="my-1 h-px bg-gray-200 " />
 
             {UserMenuItem.map(({ label, icon }, i) => (
               <DropdownMenuPrimitive.Item
@@ -82,7 +81,7 @@ const DropdownMenu = () => {
                 )}
               >
                 {icon}
-                <span className="flex-grow text-gray-700 dark:text-gray-300">
+                <span className="flex-grow text-gray-700">
                   {label}
                 </span>
               </DropdownMenuPrimitive.Item>

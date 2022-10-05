@@ -7,7 +7,7 @@ import {
 } from "@radix-ui/react-icons";
 import * as Avatar from "@radix-ui/react-avatar";
 import dynamic from "next/dynamic";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 const Main = () => {
   const [playing, setPlaying] = useState(false);
@@ -30,10 +30,11 @@ const Main = () => {
               <div className="flex flex-col">
                 <div className="flex items-center">
                   <div>
-                    <Avatar.Root className="block w-12 h-12 overflow-hidden items-center justify-center rounded-full">
+                    <Avatar.Root className="inline-flex w-12 h-12  align-middle overflow-hidden items-center justify-center rounded-full ">
                       <Avatar.Image
-                        src="https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&w=128&h=128&dpr=2&q=80"
-                        alt="Pedro Duarte"
+                        src="https://images.unsplash.com/photo-1558983467-5dd0595a81a4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                        alt="Aviato"
+                        className="object-cover w-[100%] h-[100%]"
                       />
                       <Avatar.Fallback delayMs={300}>EZ</Avatar.Fallback>
                     </Avatar.Root>
@@ -44,10 +45,10 @@ const Main = () => {
                   </div>
                 </div>
                 <div className="flex my-2">
-                  <div className="flex border text-sm px-2 mx-1 font-[NeueNormal] text-white backdrop-blur-2xl border-gray-50 rounded-lg justify-center">
+                  <div className="flex border text-sm px-2 mx-1  text-white backdrop-blur-2xl border-gray-50 rounded-lg justify-center">
                     Transport
                   </div>
-                  <div className="flex border text-sm px-2 mx-1 font-[NeueNormal] text-white backdrop-blur-2xl border-gray-50 rounded-lg justify-center">
+                  <div className="flex border text-sm px-2 mx-1 text-white backdrop-blur-2xl border-gray-50 rounded-lg justify-center">
                     Computer
                   </div>
                 </div>

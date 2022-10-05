@@ -10,7 +10,7 @@ const List = () => {
           <Avatar.Root className="inline-flex w-12 h-12  align-middle overflow-hidden items-center justify-center rounded-full">
             <Avatar.Image
               alt="Aviato"
-              src="https://images.nintendolife.com/c9e51688f744b/1280x720.jpg"
+              src="https://images.unsplash.com/photo-1558983467-5dd0595a81a4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
               className="object-cover w-[100%] h-[100%]"
             />
             <Avatar.Fallback delayMs={300}>Aviato</Avatar.Fallback>
@@ -36,7 +36,7 @@ const List = () => {
                 className={cx(
                   " radix-side-top:animate-slide-up radix-side-bottom:animate-slide-down",
                   "w-36 rounded-lg px-1.5 py-1 shadow-md ",
-                  "bg-white dark:bg-gray-800"
+                  "bg-white"
                 )}
               >
                 <DropdownMenu.Item

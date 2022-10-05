@@ -3,6 +3,9 @@ import Main from "../components/main/Main";
 import Head from "next/head";
 import Sidebar from "../components/sidebar/Sidebar";
 import Right from "../components/right/Right";
+const Count = Array.from({ length: 10 }).map(
+  (_, i, a) => a.length - i
+);
 const Home: NextPage = () => {
   return (
     <div>
@@ -19,11 +22,7 @@ const Home: NextPage = () => {
             </div>
           </div>
           <div className="my-16">
-            <Main />
-            <Main />
-            <Main />
-            <Main />
-            <Main />
+            {Count.map((tag) => <Main key={tag} />)}
           </div>
           <div className="hidden xl:flex h-screen sticky top-16 items-start">
             <Right />

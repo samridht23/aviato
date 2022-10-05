@@ -4,12 +4,12 @@ import List from "../../components/list/List";
 import cx from "classnames";
 import { ChevronDownIcon, FileIcon, ArchiveIcon } from "@radix-ui/react-icons";
 import { ReactNode } from "react";
-const TAGS = Array.from({ length: 30 }).map(
-  (_, i, a) => `v1.2.0-beta.${a.length - i}`
+
+const Count = Array.from({ length: 30 }).map(
+  (_, i, a) => a.length - i
 );
 interface RadixMenuItem {
   label: string;
-  shortcut?: string;
   icon?: ReactNode;
 }
 const generalMenuItems: RadixMenuItem[] = [
@@ -43,7 +43,7 @@ const Right = () => {
               sideOffset={5}
               className={cx(
                 " radix-side-top:animate-slide-up radix-side-bottom:animate-slide-down",
-                "w-48 rounded-lg px-1.5 py-1 shadow-md",
+                "w-48 rounded-md px-1.5 py-1 shadow-md",
                 "bg-gray-50"
               )}
             >
@@ -66,7 +66,7 @@ const Right = () => {
       <ScrollArea.Root className="w-[18rem] h-screen rounded-md">
         <ScrollArea.Viewport className="h-screen">
           <div className="px-2 py-2">
-            {TAGS.map((tag) => (
+            {Count.map((tag) => (
               <div className="leading-4 mt-1" key={tag}>
                 <List />
               </div>
@@ -76,9 +76,6 @@ const Right = () => {
         <ScrollArea.Scrollbar orientation="vertical" className="flex">
           <ScrollArea.Thumb />
         </ScrollArea.Scrollbar>
-        {/*<ScrollArea.Scrollbar orientation="horizontal">
-          <ScrollArea.Thumb />
-        </ScrollArea.Scrollbar>*/}
         <ScrollArea.Corner />
       </ScrollArea.Root>
     </div>
