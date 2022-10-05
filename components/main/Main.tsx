@@ -16,7 +16,7 @@ const Main = () => {
   };
   return (
     <>
-      <div className="flex relative z-5 border drop-shadow-xl rounded-xl bg-neutral-900 overflow-hidden w-[50rem] h-[37.5rem]">
+      <div className="flex relative z-5 border drop-shadow-xl rounded-xl mb-4 bg-neutral-900 overflow-hidden w-[50rem] h-[37.5rem]">
         <ReactPlayer
           loop
           playing={playing}

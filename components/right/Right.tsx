@@ -1,6 +1,4 @@
-import Sidebar from "../components/sidebar/Sidebar";
 import * as ScrollArea from "@radix-ui/react-scroll-area";
-import Main from "../components/main/Main";
 import List from "../../components/list/List";
 import * as Select from "@radix-ui/react-select";
 import cx from "classnames";
@@ -9,16 +7,13 @@ import {
   ChevronUpIcon,
   CheckIcon,
 } from "@radix-ui/react-icons";
-const TAGS = Array.from({ length: 20 }).map(
+const TAGS = Array.from({ length: 50}).map(
   (_, i, a) => `v1.2.0-beta.${a.length - i}`
 );
 const Right = () => {
   return (
     <div>
-      <ScrollArea.Root className="w-[19rem] h-[40rem] rounded-md bg-gray-400">
-        <ScrollArea.Viewport className="w-[100%] h-[100%]">
-          <div className="px-2 py-2">
-            <div className="px-8">
+            <div className="p-4 bg-gray-50">
               <Select.Root>
                 <Select.Trigger className="flex items-center">
                   <Select.Value placeholder="Pending" />
@@ -54,8 +49,11 @@ const Right = () => {
                 </Select.Content>
               </Select.Root>
             </div>
+      <ScrollArea.Root className="w-[18rem] h-screen rounded-md bg-gray-900">
+        <ScrollArea.Viewport className="h-screen">
+          <div className="px-2 py-2">
             {TAGS.map((tag) => (
-              <div className="leading-4 mt-2.5 pt-2.5" key={tag}>
+              <div className="leading-4 mt-1" key={tag}>
                 <List />
               </div>
             ))}
@@ -64,9 +62,9 @@ const Right = () => {
         <ScrollArea.Scrollbar orientation="vertical" className="flex">
           <ScrollArea.Thumb />
         </ScrollArea.Scrollbar>
-        <ScrollArea.Scrollbar orientation="horizontal">
+        { /*<ScrollArea.Scrollbar orientation="horizontal">
           <ScrollArea.Thumb />
-        </ScrollArea.Scrollbar>
+        </ScrollArea.Scrollbar>*/}
         <ScrollArea.Corner />
       </ScrollArea.Root>
     </div>

@@ -5,8 +5,7 @@ import cx from "classnames";
 const List = () => {
   return (
     <>
-      <div>
-        <div className="flex items-center bg-gray-50 px-8 py-2 mx-2 hover:outline outline-gray-200 outline-offset-0 rounded">
+        <div className="flex items-center justify-center bg-gray-50 py-2 hover:outline outline-gray-200 outline-offset-0 rounded">
           <div>
             <Avatar.Root className="inline-flex w-12 h-12  align-middle overflow-hidden items-center justify-center rounded-full">
               <Avatar.Image
@@ -69,7 +68,6 @@ const List = () => {
             </DropdownMenu.Root>
           </div>
         </div>
-      </div>
     </>
   );
 };

@@ -7,7 +7,7 @@ import type { ReactElement } from "react";
 
 const Navbar = () => {
   return (
-    <div className="w-full p-1 fixed z-10 bg-gray-50 border-gray border-b-[0.1rem]">
+    <div className="w-full p-1 sticky top-0 z-10  border-gray border-b-[0.1rem]">
       <div className="flex justify-between items-center px-4 lg:px-16">
         <div className="flex items-center">
           <Image src={Logo} />
