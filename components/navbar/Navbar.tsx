@@ -8,11 +8,12 @@ import type { ReactElement } from "react";
 const Navbar = () => {
   return (
     <div className="w-full p-1 fixed z-10 bg-gray-50 border-gray border-b-[0.1rem]">
-      <div className="flex justify-between items-center px-16">
+      <div className="flex justify-between items-center px-4 lg:px-16">
         <div className="flex items-center">
           <Image src={Logo} />
         </div>
-        <div className="flex">
+
+        <div className="hidden md:flex">
           <div className="flex items-center">
             <form>
               <label className="mb-2 text-sm font-medium text-gray-900 sr-only">

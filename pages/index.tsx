@@ -1,19 +1,6 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Sidebar from "../components/sidebar/Sidebar";
-import * as ScrollArea from "@radix-ui/react-scroll-area";
 import Main from "../components/main/Main";
-import List from "../components/list/List";
-import * as Select from "@radix-ui/react-select";
-import cx from "classnames";
-import {
-  ChevronDownIcon,
-  ChevronUpIcon,
-  CheckIcon,
-} from "@radix-ui/react-icons";
-const TAGS = Array.from({ length: 50 }).map(
-  (_, i, a) => `v1.2.0-beta.${a.length - i}`
-);
+import Head from "next/head";
 const Home: NextPage = () => {
   return (
     <div>
@@ -24,81 +11,10 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <div className="flex w-full items-center justify-center px-12 divide-gray-300">
-          <div className="w-1/6 h-screen">
-            <Sidebar />
-          </div>
-          <div>
-            <Main />
-          </div>
-          <div className="my-24">
-            <div className="px-8">
-              <Select.Root>
-                <Select.Trigger className="flex items-center">
-                  <Select.Value placeholder="Pending" />
-                  <Select.Icon className="ml-2">
-                    <ChevronDownIcon />
-                  </Select.Icon>
-                </Select.Trigger>
-                <Select.Content>
-                  <Select.ScrollUpButton className="flex items-center justify-center text-gray-700 dark:text-gray-300">
-                    <ChevronUpIcon />
-                  </Select.ScrollUpButton>
-                  <Select.Viewport className="bg-white dark:bg-gray-800 p-2 rounded-lg shadow-lg">
-                    <Select.Group>
-                      {["Pending", "Contacted", "Rejected"].map((f, i) => (
-                        <Select.Item
-                          disabled={f === "Grapes"}
-                          key={`${f}-${i}`}
-                          value={f.toLowerCase()}
-                          className={cx(
-                            "relative flex items-center px-8 py-2 rounded-md text-sm text-gray-700 dark:text-gray-300 font-medium focus:bg-gray-100 dark:focus:bg-gray-900",
-                            "radix-disabled:opacity-50",
-                            "focus:outline-none select-none"
-                          )}
-                        >
-                          <Select.ItemText>{f}</Select.ItemText>
-                          <Select.ItemIndicator className="absolute left-2 inline-flex items-center">
-                            <CheckIcon />
-                          </Select.ItemIndicator>
-                        </Select.Item>
-                      ))}
-                    </Select.Group>
-                  </Select.Viewport>
-                </Select.Content>
-              </Select.Root>
-            </div>
-            <ScrollArea.Root>
-              <ScrollArea.Viewport>
-                <div className="px-12 py-12">
-                  <div>Tags</div>
-                  {TAGS.map((tag) => (
-                    <div
-                      className="leading-4 mt-2.5 border-t-2 pt-2.5"
-                      key={tag}
-                    >
-                      {tag}
-                    </div>
-                  ))}
-                </div>
-              </ScrollArea.Viewport>
-              <ScrollArea.Scrollbar orientation="vertical" className="flex">
-                <ScrollArea.Thumb />
-              </ScrollArea.Scrollbar>
-              <ScrollArea.Scrollbar orientation="horizontal">
-                <ScrollArea.Thumb />
-              </ScrollArea.Scrollbar>
-              <ScrollArea.Corner />
-            </ScrollArea.Root>
-            <List />
-            <List />
-            <List />
-            <List />
-            <List />
-            <List />
-            <List />
-            <List />
-          </div>
+        <div className="flex pt-16 bg-gray-500 w-full justify-center">
+          <div className="bg-violet-500">left</div>
+          <div className="bg-violet-500">center</div>
+          <div className="bg-violet-500">right</div>
         </div>
       </main>
     </div>
