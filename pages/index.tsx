@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
 import Main from "../components/main/Main";
 import Head from "next/head";
-import Sidebar from "../components/sidebar/Sidebar"
-import Right from "../components/right/Right"
+import Sidebar from "../components/sidebar/Sidebar";
+import Right from "../components/right/Right";
 const Home: NextPage = () => {
   return (
     <div>
@@ -12,12 +12,22 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className="flex bg-gray-500 w-full justify-center">
-          <div className="flex bg-violet-500 h-screen sticky top-16 items-center" >
-          <div className=""><Sidebar /></div>
+        <div className="flex bg-gray-50 w-full justify-center">
+          <div className="flex h-screen sticky top-16 items-center">
+            <div className="hidden lg:block">
+              <Sidebar />
+            </div>
           </div>
-          <div className="bg-violet-500 my-16"><Main /><Main /><Main /><Main /><Main /></div>
-          <div className="flex bg-violet-500 h-screen sticky top-16 items-start"><Right /></div>
+          <div className="my-16">
+            <Main />
+            <Main />
+            <Main />
+            <Main />
+            <Main />
+          </div>
+          <div className="hidden xl:flex h-screen sticky top-16 items-start">
+            <Right />
+          </div>
         </div>
       </main>
     </div>
